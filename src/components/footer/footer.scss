@@ -1,0 +1,128 @@
+@import "../../../styles/mixins/index.scss";
+
+.first-footer {
+  padding: 30px 0;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+
+  .footer-alignment {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint("sm-max") {
+      display: block;
+    }
+
+    .right-content {
+      display: flex;
+      gap: 170px;
+      .quicklinks {
+        .fLink {
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #5c5c5c;
+          padding: 0 0 14px 0;
+        }
+      }
+
+      @include breakpoint("sm-max") {
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        .icon-text {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          cursor: pointer;
+          // padding: 0 0 17px 0;
+          div {
+            display: flex;
+            align-items: center;
+          }
+
+          span {
+            display: block;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #5c5c5c;
+          }
+        }
+      }
+
+      h5 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+        margin: 0 0 14px 0;
+        color: #232328;
+      }
+
+      a {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #5c5c5c;
+        padding: 0 0 14px 0;
+      }
+    }
+
+    .left-content {
+      @include breakpoint("sm-max") {
+        padding: 0 0 24px 0;
+      }
+      img {
+        cursor: pointer;
+        margin: 0 0 20px 0;
+      }
+
+      h6 {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #5c5c5c;
+      }
+    }
+  }
+}
+
+.last-footer-content-alignment {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoint("sm-max") {
+    display: block;
+  }
+
+  .left-content {
+    @include breakpoint("sm-max") {
+      padding: 0 0 20px 0;
+    }
+    span {
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #5c5c5c;
+      cursor: pointer;
+
+      @include breakpoint("sm-max") {
+        text-align: center;
+      }
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+}

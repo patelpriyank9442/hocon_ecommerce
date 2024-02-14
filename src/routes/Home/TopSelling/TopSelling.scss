@@ -1,0 +1,61 @@
+@import '../../../../styles/mixins/index.scss';
+
+.top-selling-all-content-alignment {
+    padding: 120px 0;
+
+    @include breakpoint("sm-max") {
+        padding: 60px 0;
+    }
+
+    .top-selling-content-alignment {
+        padding: 0 0 36px 0;
+        h2 {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 43px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #232328;
+            margin: 0 0 2px 0;
+
+            @include breakpoint("sm-max") {
+                font-size: 22px;
+                line-height: 30px;
+            }
+        }
+
+        .line-center-alignment {
+            text-align: center;
+            margin: 0 0 14px 0;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 23px;
+            text-align: center;
+            color: #5C5C5C;
+            max-width: 792px;
+            margin: 0 auto;
+
+            @include breakpoint("sm-max") {
+                max-width: 340px;
+            }
+        }
+    }
+
+
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+
+        .grid-items {
+            width: calc(25% - 24px);
+
+            @include breakpoint("sm-max") {
+                width: 100%;
+            }
+        }
+    }
+}

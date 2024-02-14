@@ -1,0 +1,21 @@
+@import '../../../styles/mixins/index.scss';
+
+.product-details-breadcumbs-alignment {
+    padding: 20px 0 66px 0;
+}
+
+.product-details-all-information-alignment {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 480px;
+        gap: 24px;
+
+        @include breakpoint("sm-max") {
+            grid-template-columns: repeat(1 , 1fr);
+        }
+
+        .grid-items {
+            
+        }
+    }
+}

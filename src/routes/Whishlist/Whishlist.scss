@@ -1,0 +1,50 @@
+@import "../../../styles/mixins/index.scss";
+
+.whishlist-breadcrumbs-alignment {
+  padding: 20px 0 30px 0;
+}
+
+.whishlist-card-all-content-alignment {
+  padding: 0 0 100px 0;
+
+  @include breakpoint("sm-max") {
+    padding: 0 0 60px 0;
+  }
+
+  .page_header {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0 30px 0;
+  }
+  .data_content {
+    .data_heading {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0 0 5px 0;
+      color: #9284ff;
+    }
+    .data_sub_heading {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 0 10px 0;
+    }
+  }
+  .flex {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    .no_cats {
+      text-align: center !important;
+      color: #9283ff;
+      font-weight: 500;
+      width: 100%;
+    }
+    .flex-items {
+      width: calc(25% - 24px);
+
+      @include breakpoint("sm-max") {
+        width: 100%;
+      }
+    }
+  }
+}

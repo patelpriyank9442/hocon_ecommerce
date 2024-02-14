@@ -1,0 +1,41 @@
+@import "../../../../styles/mixins/index.scss";
+
+.filter-panel-all-content-alignment {
+    padding: 0 0 23px 0;
+  .all-button-alignment {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    @include breakpoint("sm-max") {
+      flex-wrap: wrap;
+      padding: 24px 0 0 0;
+    }
+
+    a {
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #9284ff;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: transparent;
+      background: #ffffff;
+      cursor: pointer;
+      padding: 3px 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      font-family: "Jost", sans-serif;
+      color: #5c5c5c;
+      border: 1px solid #5c5c5c;
+      border-radius: 26px;
+    }
+  }
+}

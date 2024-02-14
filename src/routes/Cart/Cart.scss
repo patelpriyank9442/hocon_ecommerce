@@ -1,0 +1,43 @@
+@import '../../../styles/mixins/index.scss';
+
+.cart-first-header-content-alignment {
+    padding: 20px 0 60px 0;
+
+
+    @include breakpoint("sm-max") {
+        padding: 24px 0;
+    }
+
+
+}
+
+.cart-all-table-content-alignment {
+    padding: 0 0 120px 0;
+
+    @include breakpoint("sm-max") {
+        padding: 0 0 60px 0;
+    }
+    .flex-box {
+        display: flex;
+        gap: 24px;
+
+        @include breakpoint("sm-max") {
+            display: block;
+        }
+
+        .flex-box-items:nth-child(2) {
+            width: 384px;
+
+            @include breakpoint("sm-max") {
+                width: 100%;
+            }
+        }
+        .flex-box-items:nth-child(1) {
+            width: calc(100% - 384px);
+            @include breakpoint("sm-max") {
+                width: 100%;
+                margin: 24px 0 0 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+@import "../../../../styles/mixins/index.scss";
+
+.banner-content-all-alignment {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    @include breakpoint("sm-max") {
+      grid-template-columns: repeat(1 , 1fr);
+    }
+    .grid-items:last-child {
+        .blur-div {
+            background: linear-gradient(90deg, #509FB7 37.87%, rgba(255, 255, 255, 0) 100%);
+        }
+    }
+    .grid-items {
+      position: relative;
+      border-radius: 5px;
+
+      img {
+        width: 100%;
+        height: 421px;
+        border-radius: 5px;
+        object-position: center;
+        object-fit: cover;
+
+        @include breakpoint("sm-max") {
+          height: 321px;
+        }
+      }
+
+      .content-alignment {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 40px;
+        @include breakpoint("sm-max") {
+          padding: 20px;
+        }
+        h4 {
+          font-weight: 600;
+          font-size: 26px;
+          line-height: 38px;
+          color: #232328;
+          margin: 0 0 20px 0;
+
+          @include breakpoint("sm-max") {
+            font-size: 22px;
+            line-height: 30px;
+            margin: 0 0 14px 0;
+          }
+        }
+
+        button {
+          border: none;
+          cursor: pointer;
+          font-weight: 500;
+          font-family: "Jost", sans-serif;
+          font-size: 16px;
+          line-height: 23px;
+          text-transform: uppercase;
+          border: 1px solid #232328;
+          border-radius: 5px;
+          padding: 14px 28px;
+          color: #232328;
+          background-color: transparent;
+        
+          @include breakpoint("sm-max") {
+            font-size: 14px;
+            line-height: 20px;
+            padding: 12px 24px;
+          }
+        }
+      }
+
+      .blur-div {
+        background: linear-gradient(
+          90deg,
+          #e5ba94 37.87%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    }
+  }
+}

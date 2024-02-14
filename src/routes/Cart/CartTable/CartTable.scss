@@ -1,0 +1,123 @@
+@import "../.././../../styles/mixins/index.scss";
+
+.cart-table-design-all-content-alignment {
+
+  @include breakpoint("sm-max") {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .no_prods {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 500;
+    color: #9284FF;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #EBEBEB;
+      }
+
+      tr:last-child {
+        border: none;
+      }
+    }
+
+    tr {
+      vertical-align: top;
+
+      td {
+        padding: 12px 14px;
+
+        .icon-text-alignment {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          img{
+          cursor: pointer;
+          }
+        }
+
+        .form-group {
+          button {
+            background: #ffffff;
+            font-weight: 400;
+            font-size: 16px;
+            color: #5c5c5c;
+            border: 1px solid #5c5c5c;
+            padding: 4px 14px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            border-radius: 5px;
+          }
+        }
+
+        span {
+          display: block;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #5c5c5c;
+        }
+
+        .all-content-alignment {
+          display: flex;
+          gap: 12px;
+        }
+
+        .content {
+          width: 100%;
+
+          p {
+
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #5c5c5c;
+          }
+        }
+
+        .image-box {
+          border: 1px solid #ebebeb;
+          border-radius: 5px;
+          min-width: 100px;
+          width: 100px;
+          height: 102px;
+
+          @include breakpoint("sm-max") {
+            min-width: 100px;
+          }
+
+          img {
+            width: 100%;
+            cursor: pointer;
+            height: 100px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+
+    thead {
+      background: #ebebeb;
+    }
+
+    tr {
+      th {
+        padding: 8px 14px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+        color: #5c5c5c;
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+@import "../../../../styles/mixins/index.scss";
+
+.table {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+      tr {
+        background: #ebebeb;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        td {
+          padding: 17px 0;
+
+          h6 {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
+            text-align: right;
+            color: #5c5c5c;
+          }
+        }
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: 131px 1fr;
+        gap: 12px;
+
+        .card-grid-items:nth-child(1) {
+          border: 1px solid #ebebeb;
+          border-radius: 5px;
+          height: 135px;
+
+          img {
+            width: 100%;
+            height: 133px;
+            object-fit: contain;
+          }
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #5c5c5c;
+
+          margin: 0 0 5px 0;
+        }
+
+        span {
+          display: block;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #232328;
+        }
+      }
+    }
+    tr {
+      th {
+        padding: 8px 33px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+        color: #5c5c5c;
+      }
+    }
+  }
+}
+
+.final-total-content-right-alignment {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0 60px 0;
+
+  .final-box {
+    width: 350px;
+
+    @include breakpoint("sm-max") {
+      width: 100%;
+    }
+
+    .text-grid {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 90px;
+      padding: 0 0 22px 0;
+
+      @include breakpoint("sm-max") {
+        gap: 40px;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        text-align: right;
+        color: #232328;
+      }
+
+      span {
+        display: block;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        text-align: right;
+        color: #5c5c5c;
+      }
+    }
+  }
+}

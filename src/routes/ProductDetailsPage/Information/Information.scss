@@ -1,0 +1,73 @@
+@import "../../../../styles/mixins/index.scss";
+
+.all-information-content-alignment {
+  padding: 70px 0 120px 0;
+
+
+  @include breakpoint("sm-max") {
+    padding: 60px 0;
+  }
+
+  .details-text-style {
+    padding: 36px 0 0 0;
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      color: #5c5c5c;
+      display: block;
+    }
+  }
+
+  .tab {
+    border-bottom: 4px solid #ebebeb;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    span {
+      display: block;
+      font-weight: 400;
+      cursor: pointer;
+      font-size: 22px;
+      line-height: 32px;
+      color: #5c5c5c;
+      padding: 0 0 16px 0;
+      position: relative;
+
+      @include breakpoint("sm-max") {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+          opacity: 1;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        bottom: -4px;
+        left: 0;
+        background-color: #232328;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 0;
+        transition: opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out,
+          -webkit-transform 0.3s ease-out;
+      }
+
+      &:hover {
+        color: #232328;
+      }
+    }
+  }
+}

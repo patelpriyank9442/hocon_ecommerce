@@ -1,0 +1,39 @@
+@import "../../../../styles/mixins/index.scss";
+
+.related-product-all-content-alignment {
+  padding: 0 0 200px 0;
+
+
+  @include breakpoint("sm-max") {
+    padding: 0 0 60px 0;
+  } 
+  .section-title {
+    padding: 0 0 40px 0;
+    p {
+      text-align: center;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 43px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #232328;
+
+      @include breakpoint("sm-max") {
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .flex-box {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    .flex-box-items {
+      width: calc(25% - 24px);
+      @include breakpoint("sm-max") {
+        width: 100%;
+      }
+    }
+  }
+}

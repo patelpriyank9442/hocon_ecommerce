@@ -1,0 +1,113 @@
+@import "../../../../styles/mixins/index.scss";
+
+.all-category-content-alignment {
+  padding: 120px 0;
+
+  @include breakpoint("sm-max") {
+    padding: 60px 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    @include breakpoint("sm-max") {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-items {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 421px;
+        border-radius: 5px;
+        object-fit: cover;
+      }
+
+      .content-alignment {
+        position: absolute;
+        left: 0;
+        bottom: 30px;
+
+        .text-style {
+          width: 210px;
+          background: linear-gradient(
+            90deg,
+            #ffffff 63.56%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          padding: 11px 20px;
+
+          span {
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 38px;
+            text-transform: uppercase;
+            color: #232328;
+            display: block;
+            @include breakpoint("sm-max") {
+              font-size: 16px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .no_cats {
+    text-align: center !important;
+    color: #9283ff;
+    font-weight: 500;
+  }
+  .sub-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px 0 0 0;
+    gap: 24px;
+    @include breakpoint("sm-max") {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sub-grid-items {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 342px;
+        border-radius: 5px;
+        object-fit: cover;
+      }
+
+      .content-alignment {
+        position: absolute;
+        left: 0;
+        bottom: 30px;
+
+        .text-style {
+          width: 210px;
+          background: linear-gradient(
+            90deg,
+            #ffffff 63.56%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          padding: 4px 10px;
+
+          span {
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 32px;
+            text-transform: uppercase;
+            color: #232328;
+            display: block;
+
+            @include breakpoint("sm-max") {
+              font-size: 16px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

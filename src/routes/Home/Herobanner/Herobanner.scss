@@ -1,0 +1,69 @@
+@import "../../../../styles/mixins/index.scss";
+
+.hero-all-content-alignment {
+  .relative-main {
+    position: relative;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+
+      @include breakpoint("sm-max") {
+        height: 450px;
+      }
+    }
+
+    .content-alignment {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      span {
+        display: block;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 0 0 10px 0;
+        line-height: 20px;
+        letter-spacing: 0.15em;
+        color: #9284ff;
+      }
+
+      h1 {
+        font-weight: 400;
+        margin: 0 0 38px 0;
+        font-size: 26px;
+        line-height: 151.5%;
+        color: #232328;
+        font-family: "Merienda One", cursive;
+        max-width: 327px;
+
+        @include breakpoint("sm-max") {
+          font-size: 20px;
+          line-height: 28px;
+          max-width: calc(100% - 35%);
+        }
+      }
+
+      button {
+        font-family: 'Jost', sans-serif;
+
+        color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        background: #9284ff;
+        border-radius: 5px;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+        padding: 13px 22px;
+
+        @include breakpoint("sm-max") {
+          font-size: 14px;
+          line-height: 16px;
+          padding: 12px 22px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@import "../../../../styles/mixins/index.scss";
+
+.news-letter-all-content-alignment {
+  padding: 160px 0 80px 0;
+
+  @include breakpoint("sm-max") {
+    padding: 60px 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 408px 1fr;
+    gap: 102px;
+    align-items: center;
+
+
+    @include breakpoint("sm-max") {
+      grid-template-columns: repeat(1 , 1fr);
+      gap: 40px;
+    }
+    .grid-items {
+      h4 {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 58px;
+        color: #3b3f4f;
+        margin: 0 0 14px 0;
+
+        @include breakpoint("sm-max") {
+          font-size: 22px;
+          line-height: 30px;
+        }
+      }
+
+      .image-grid {
+        display: grid;
+        grid-template-columns: 1fr 282px ;
+        gap: 24px;
+
+        @include breakpoint("sm-max") {
+          grid-template-columns: repeat(1 , 1fr);
+        }
+
+        .first-image {
+          margin-top: 40px;
+
+          @include breakpoint("sm-max") {
+            margin-top: 0;
+          }
+
+            img {
+              width: 100%;
+              object-fit: cover;
+              height: 392px;
+              border-radius: 5px;
+            }
+        }
+
+        .sec-image {
+          margin-top: -40px;
+
+          @include breakpoint("sm-max") {
+            margin-top: 20px;
+          }
+          img {
+            border-radius: 5px;
+            height: 331px;
+            object-fit: cover;
+            width: 100%;
+          }
+        }
+      }
+
+      .search-grid {
+        display: grid;
+        grid-template-columns: 1fr 112px;
+        gap: 6px;
+
+        button {
+          padding: 10px;
+          border: none;
+          color: #fff;
+          background: #9284ff;
+          border-radius: 5px;
+          height: 45px;
+          width: 100%;
+          padding: 10px;
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 25px;
+          text-transform: uppercase;
+          font-family: "Jost", sans-serif;
+        }
+
+        input {
+          width: 100%;
+          height: 45px;
+          border: none;
+          cursor: text;
+          font-weight: 400;
+          padding: 0 14px;
+          background: #ebebeb;
+          border-radius: 5px;
+          font-size: 17px;
+          line-height: 25px;
+          color: #5c5c5c;
+          font-family: "Jost", sans-serif;
+        
+            &:focus {
+                outline: none;
+            }
+        }
+
+        ::placeholder {
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 25px;
+          color: #5c5c5c;
+          font-family: "Jost", sans-serif;
+        }
+      }
+      p {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 25px;
+        margin: 0 0 30px 0;
+        color: #5c5c5c;
+      }
+    }
+  }
+}

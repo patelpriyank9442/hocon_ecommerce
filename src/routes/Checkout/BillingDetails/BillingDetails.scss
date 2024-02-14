@@ -1,0 +1,90 @@
+@import "../../../../styles/mixins/index.scss";
+
+.billing-details-all-content-alignment {
+  h1 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    margin: 0 0 40px 0;
+    color: #232328;
+  }
+
+  .two-col-grid {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 24px;
+    padding: 0 0 24px 0;
+  }
+
+  .input-bottom-alignment {
+    padding: 0 0 24px 0;
+  }
+
+  .input {
+    label {
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #5c5c5c;
+      padding: 0 0 6px 0;
+    }
+
+    ::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #232328;
+      opacity: 0.5;
+    }
+
+    input {
+      border-radius: 5px;
+      width: 100%;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      border: none;
+      color: #5c5c5c;
+      height: 40px;
+      padding: 0 14px;
+      background-color: rgb(235, 235, 235, 0.6);
+
+      &:focus {
+        outline: none;
+      }
+    }
+    textarea{
+      border-radius: 5px;
+      width: 100%;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      border: none;
+      color: #5c5c5c;
+      height: 100px;
+      padding: 14px;
+      background-color: rgb(235, 235, 235, 0.6);
+
+      &:focus {
+        outline: none;
+      }
+    }
+    select {
+      border-radius: 5px;
+      width: 100%;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      border: none;
+      color: #5c5c5c;
+      height: 40px;
+      padding: 0 14px;
+      background-color: rgb(235, 235, 235, 0.6);
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

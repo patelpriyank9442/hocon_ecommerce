@@ -1,0 +1,29 @@
+.help_item {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ebebeb;
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  .help_title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #9284ff;
+    margin-bottom: 5px;
+  }
+  .help_desc {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+}
+
+.no_help {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #9284ff;
+}

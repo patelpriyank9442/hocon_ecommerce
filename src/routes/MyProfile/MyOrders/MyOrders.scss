@@ -1,0 +1,210 @@
+@import "../../../../styles/mixins/index.scss";
+
+.my-orders-main-boxs {
+  background: #ffffff;
+  /* divider */
+
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+
+  .new-tab {
+    padding: 20px 0 9px 0;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+
+    @include breakpoint("sm-max") {
+      gap: 10px;
+    }
+
+    span {
+      padding: 0 20px;
+      display: block;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      color: #232328;
+      cursor: pointer;
+      position: relative;
+      opacity: 0.5;
+      transition: 0.3s ease-in-out;
+
+      @include breakpoint("sm-max") {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      &:hover,
+      &.active {
+        color: #232328;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
+        &::after {
+          transform: scaleX(1);
+          opacity: 1;
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        bottom: -10px;
+        left: 0;
+        background-color: #9284ff;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 0;
+        transition: opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out,
+          -webkit-transform 0.3s ease-out;
+      }
+    }
+  }
+  .no_cats {
+    text-align: center !important;
+    color: #9283ff;
+    font-weight: 500;
+    width: 100%;
+    margin: 20px 0;
+  }
+  .body-content-alignment {
+    padding: 20px;
+    border-bottom: 1px solid #ebebeb;
+
+    .all-content-alignment {
+      display: flex;
+      justify-content: space-between;
+
+      @include breakpoint("sm-max") {
+        display: block;
+      }
+      .right-content {
+        @include breakpoint("sm-max") {
+          padding: 20px 0 0 0;
+        }
+        p {
+          margin: 0 0 8px 0;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 17px;
+          text-align: right;
+          color: #5c5c5c;
+        }
+        .status_item {
+          display: flex;
+          column-gap: 5px;
+          align-items: center;
+          justify-content: end;
+        }
+        .statBox {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 146.9%;
+          padding: 1px 10px;
+          border-radius: 10px;
+          border: 1px solid #017aff;
+          color: #017aff;
+        }
+        .box_success {
+          border: 1px solid #29a745;
+          color: #29a745;
+        }
+        .box_primary {
+          border: 1px solid #017aff;
+          color: #017aff;
+        }
+        .box_danger {
+          border: 1px solid #dc3544;
+          color: #dc3544;
+        }
+        .box_info {
+          border: 1px solid #18a3b9;
+          color: #18a3b9;
+        }
+        .box_warning {
+          border: 1px solid #ffc107;
+          color: #ffc107;
+        }
+        .box_dark {
+          border: 1px solid #353a41;
+          color: #353a41;
+        }
+      }
+      .left-content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        .image-box {
+          border: 1px solid #ebebeb;
+          border-radius: 5px;
+
+          width: 100px;
+          height: 102px;
+
+          img {
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
+          }
+        }
+
+        .content {
+          h6 {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            color: #5c5c5c;
+            // margin: 0 0 30px 0;
+          }
+          .coupon_used {
+            display: flex;
+            color: #5c5c5c;
+            align-items: center;
+            font-size: 14px;
+            .coupon_code {
+              font-weight: 500;
+              font-size: 15px;
+              color: #9284ff;
+              margin-right: 5px;
+            }
+            .coupon_per {
+              font-weight: 500;
+              font-size: 15px;
+              color: #9284ff;
+              margin: 0 5px;
+            }
+          }
+
+          h5 {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            // margin: 0 0 7px 0;
+            color: #232328;
+          }
+
+          p {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 146.9%;
+            color: #9284ff;
+            del {
+              font-weight: 300;
+              font-size: 12px;
+              line-height: 146.9%;
+              text-decoration-line: line-through;
+              color: #5c5c5c;
+            }
+          }
+        }
+      }
+    }
+  }
+}

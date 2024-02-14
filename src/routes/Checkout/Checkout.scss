@@ -1,0 +1,27 @@
+@import '../../../styles/mixins/index.scss';
+
+.checkout-breadcrumbs-all-content-alignment {
+    padding: 20px 0 30px 0;
+}
+
+.checkout-page-all-content-alignment-details {
+    padding: 0 0 166px 0;
+
+    @include breakpoint("sm-max") {
+        padding: 0 0 60px 0;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 385px;
+        gap: 24px;
+
+
+        @include breakpoint("sm-max") {
+            grid-template-columns: repeat(1 , 1fr);
+        }
+
+        .grid-items {
+
+        }
+    }
+}

@@ -1,0 +1,80 @@
+@import "../../../styles/mixins/index.scss";
+
+.category-page-breadcrumbs-alignment {
+  padding: 20px 0 36px 0;
+}
+
+.category-page-all-content-alignment {
+  padding: 0 0 50px 0;
+
+  .load-more-button {
+    padding: 40px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      border: 1px solid #232328;
+      border-radius: 5px;
+      background-color: transparent;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 23px;
+      text-transform: uppercase;
+      color: #232328;
+      padding: 14px 28px;
+      font-family: "Jost", sans-serif;
+      cursor: pointer;
+
+      @include breakpoint("sm-max") {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 12px 24px;
+      }
+    }
+  }
+
+  .flex {
+    gap: 24px;
+    display: flex;
+
+    @include breakpoint("sm-max") {
+      display: block;
+    }
+
+    .flex-items:nth-child(1) {
+      width: 282px;
+
+      @include breakpoint("sm-max") {
+        width: 100%;
+        display: none;
+      }
+    }
+    .flex-items:nth-child(2) {
+      width: calc(100% - 282px);
+      @include breakpoint("sm-max") {
+        width: 100%;
+      }
+    }
+  }
+
+  .card-flex {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    .no_cats {
+      text-align: center;
+      color: #9283ff;
+      width: 100%;
+      font-weight: 500;
+      margin: 20px 0;
+    }
+    .card-flex-items {
+      width: calc(33.33% - 24px);
+
+      @include breakpoint("sm-max") {
+        width: 100%;
+      }
+    }
+  }
+}

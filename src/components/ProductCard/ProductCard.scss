@@ -1,0 +1,77 @@
+@import "../../../styles/mixins/index.scss";
+
+.main-product-card-details-content-alignment {
+  div {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .product-details {
+    padding: 14px 0 0 0;
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 23px;
+      margin: 0 0 10px 0;
+      color: #5c5c5c;
+    }
+
+    span {
+      display: block;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 23px;
+      color: #9284ff;
+
+      del {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+        text-decoration-line: line-through;
+        color: #5c5c5c;
+      }
+    }
+  }
+  .product-image {
+    position: relative;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    height: 342px;
+
+    @include breakpoint("sm-max") {
+      height: 410px;
+    }
+
+    .image-style {
+      img {
+        width: 100%;
+        height: 338px;
+        object-fit: cover;
+
+        @include breakpoint("sm-max") {
+          height: 408px;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .heart-icons-alignment {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+
+      div {
+        width: 32px;
+        height: 32px;
+        background: rgba(146, 132, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+    }
+  }
+}

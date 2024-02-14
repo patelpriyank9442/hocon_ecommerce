@@ -1,0 +1,75 @@
+@import "../../../../styles/mixins/index.scss";
+
+.new-launch-all-content-alignment {
+  padding: 120px 0;
+  @include breakpoint("sm-max") {
+    padding: 60px 0;
+}
+
+  .slick-slide {
+    padding: 0 12px;
+}
+.slick-list {
+    margin: 0 -12px;
+}
+
+.left-arrow-alignment {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30px;
+  @include breakpoint("sm-max") {
+    display: none;
+  }
+    img {
+        cursor: pointer;
+    }
+}
+
+.right-arrow-alignment {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -30px;
+    @include breakpoint("sm-max") {
+      display: none;
+    }
+
+    img {
+        transform: rotate(180deg);
+        cursor: pointer;
+    }
+}
+
+  .new-launch-text {
+    padding: 0 0 36px 0;
+    h2 {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 43px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #232328;
+      margin: 0 0 2px 0;
+      @include breakpoint("sm-max") {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    }
+
+    .line-center-alignment {
+      text-align: center;
+      margin: 0 0 14px 0;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 23px;
+      text-align: center;
+      color: #5c5c5c;
+      max-width: 792px;
+      margin: 0 auto;
+    }
+  }
+}
